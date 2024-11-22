@@ -53,3 +53,7 @@ Analiz sonucunda, hastane içi ölüm oranlarını etkileyen ana faktörler aras
 3. Apache skorlarına dayalı klinik ölçümler.
 
 Bu bulgular, hastane yönetimine hasta bakım süreçlerini iyileştirme konusunda bilgi sağlayabilir.
+
+
+# Projenin Kaggle Linki : https://www.kaggle.com/code/ahmeteren9/patient-survival-prediction
+
