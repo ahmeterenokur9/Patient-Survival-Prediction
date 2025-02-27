@@ -1,58 +1,54 @@
-# Patient-Survival-Prediction
+**Patient Survival Prediction – Hospital Data Analysis Project**
 
-# Hastane Veri Analizi Projesi
+**Project Summary:**  
+This project aims to understand the factors affecting in-hospital mortality rates by analyzing data related to the ICU processes of hospitalized patients. The dataset used includes patient demographic information, ICU admission sources, ICU types, and specific clinical measurements.
 
-## Proje Özeti
-Bu proje, hastaneye yatırılan hastaların yoğun bakım süreçleriyle ilgili verileri analiz ederek, hastane içi ölüm oranlarını etkileyen faktörleri anlamayı amaçlamaktadır. Projede kullanılan veri seti, hasta demografik bilgileri, yoğun bakım kabul kaynakları, yoğun bakım türleri ve belirli klinik ölçümleri içermektedir.
+**Dataset:**  
+The dataset contains detailed information about patients' conditions within the hospital and ICU. It includes missing values and various data types (numerical and categorical). During data processing, missing value analysis and data cleaning were performed.
 
-## Veri Seti
-Kullanılan veri seti, hastaların hastane ve yoğun bakım ünitesi içindeki durumlarına ilişkin detaylı bilgiler içermektedir. Verilerde eksik değerler ve çeşitli veri türleri (sayısal ve kategorik) bulunmaktadır. Verilerin işlenmesi sırasında eksik veri analizi ve veri temizleme işlemleri uygulanmıştır.
+**Dataset Features:**  
+- **Ethnicity:** 6 categories, missing values are NaN.  
+- **Gender:** 2 categories (M, F), missing values are NaN.  
+- **ICU Admit Source:** 5 categories.  
+- **ICU Stay Type:** Initial admission, readmission, or transfer.  
+- **ICU Type:** 8 different types.  
+- **Apache 3J Body System:** 12 body system categories.  
+- **Apache 2 Body System:** 11 body system categories.
 
-### Veri Seti Özellikleri
-- **Ethnicity (Etnik Köken):** 6 kategori, eksik değerler NaN.
-- **Gender (Cinsiyet):** 2 kategori (M, F), eksik değerler NaN.
-- **ICU Admit Source (Yoğun Bakım Kabul Kaynağı):** 5 kategori.
-- **ICU Stay Type (Yoğun Bakım Kalış Türü):** İlk kabul, yeniden kabul veya transfer.
-- **ICU Type (Yoğun Bakım Türü):** 8 farklı tür.
-- **Apache 3J Body System:** 12 vücut sistemi kategorisi.
-- **Apache 2 Body System:** 11 vücut sistemi kategorisi.
+**Libraries Used:**  
+- **Pandas:** Data processing and analysis.  
+- **Matplotlib & Seaborn:** Data visualization.  
+- **Missingno:** Missing data analysis and visualization.  
+- **Scikit-learn:** Machine learning and prediction.
 
-## Kullanılan Kütüphaneler
-Projede aşağıdaki Python kütüphaneleri kullanılmıştır:
-- **Pandas:** Veri işleme ve analiz.
-- **Matplotlib ve Seaborn:** Veri görselleştirme.
-- **Missingno:** Eksik veri analizi ve görselleştirme.
-- **Scikit-learn:** Makine öğrenmesi ve tahminleme.
+**Analysis Performed:**  
+1. **Data Inspection and Cleaning:**  
+   - Data type checks: Each column was reviewed, and categorical and numerical data types were separated.  
+   - Missing Data Analysis: The missingno library was used to detect and visualize missing values.  
+   - Missing data treatment:  
+     - Rows were deleted if there was a high rate of missing values.  
+     - Missing values were filled using mean, median, or mode methods.  
 
-## Yapılan Analizler
-### 1. Veri İncelemesi ve Temizleme
-- **Veri Tipi Kontrolü:** Her sütunun veri tipi gözden geçirilerek, kategorik ve sayısal veri türleri ayrıldı.
-- **Eksik Veri Analizi:**
-  - Eksik değerlerin tespit edilmesi ve görselleştirilmesi için `missingno` kütüphanesi kullanıldı.
-  - Eksik veriler:
-    - Silindi (yüksek eksiklik oranı varsa).
-    - Ortalama, medyan, mod gibi yöntemlerle dolduruldu.
+2. **Categorical Variable Analysis:**  
+   - Frequency and percentage distributions were examined.  
+   - Relationships between categories were analyzed using cross-tabulation.  
+   - Visualizations were created with bar charts.
 
-### 2. Kategorik Değişkenlerin Analizi
-- Frekans ve yüzdelik dağılımlar incelendi.
-- Çapraz tablolar kullanılarak kategoriler arası ilişkiler analiz edildi.
-- Çubuk grafikler ile görselleştirme yapıldı.
+3. **Numerical Data Analysis:**  
+   - Distribution and basic statistical metrics were examined.  
+   - Outliers were detected through box plots and histograms.
 
-### 3. Sayısal Verilerin Analizi
-- Dağılım ve temel istatistiksel metrikler incelendi.
-- Kutu grafikleri ve histogramlar oluşturularak verilerdeki uç değerler tespit edildi.
+4. **Missing Data Strategies:**  
+   - **Deletion:** Rows with randomly distributed or low missing data were deleted.  
+   - **Imputation:** Missing data was filled using mean, median, or mode. Forward and backward filling techniques were used for time series data.
 
-### 4. Eksik Veri Stratejileri
-- **Silme:** Eksik veriler rastgele dağılım gösteriyorsa veya eksiklik oranı düşükse, ilgili satırlar silindi.
-- **Doldurma:** Ortalama, medyan veya mod kullanılarak eksik veriler dolduruldu. Zaman serisi verileri için ileri ve geri doldurma yöntemleri kullanıldı.
+**Outputs and Results:**  
+The analysis identified key factors affecting in-hospital mortality rates, including:  
+- Patient demographics (gender, ethnicity).  
+- ICU admission source and type.  
+- Clinical measurements based on Apache scores.  
 
-## Çıktılar ve Sonuçlar
-Analiz sonucunda, hastane içi ölüm oranlarını etkileyen ana faktörler arasında şunlar tespit edilmiştir:
-1. Hastanın demografik özellikleri (cinsiyet, etnik köken).
-2. Yoğun bakım kabul kaynağı ve türü.
-3. Apache skorlarına dayalı klinik ölçümler.
-
-Bu bulgular, hastane yönetimine hasta bakım süreçlerini iyileştirme konusunda bilgi sağlayabilir.
+These findings can provide insights for hospital management to improve patient care processes.
 
 
 # Projenin Kaggle Linki : https://www.kaggle.com/code/ahmeteren9/patient-survival-prediction
